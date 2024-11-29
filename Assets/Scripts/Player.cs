@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public float speed = 10f;
+    public float speed = 6f;
     private float mov_x, mov_y;
 
     private Vector2 mousePos;
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(mov_x, mov_y).normalized * speed;
+        rb.linearVelocity = new Vector2(mov_x, mov_y).normalized * speed * 100.0f * Time.deltaTime;
     }
 
     void GetInput()
