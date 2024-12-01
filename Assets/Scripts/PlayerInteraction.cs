@@ -16,10 +16,7 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         hit = Physics2D.Raycast(raypoint.position, raypoint.up, range, interactableLayer);
-
         Debug.DrawRay(raypoint.position, raypoint.up * range, Color.red);
-
-        
 
         if (hit)
         {
@@ -27,11 +24,9 @@ public class PlayerInteraction : MonoBehaviour
 
             if(interactable != null)
             {
-                Debug.Log("Can Destry");
-
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    hit.collider.GetComponent<TestDestroyObject>().Interact();
+                    interactable.Interact();
                 }
             }
         }
