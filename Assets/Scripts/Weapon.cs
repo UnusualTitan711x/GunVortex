@@ -3,13 +3,12 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public WeaponData weaponData;
-    void Start()
-    {
-        
-    }
+
+    public int currentTotalAmmo, currentMagAmmo;
 
     void Update()
     {
         
     }
 }
+

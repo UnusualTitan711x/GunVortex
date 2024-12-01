@@ -1,8 +1,11 @@
+using System.Data.Common;
 using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour, IInteractable
 {
-    PlayerInventory inventory = PlayerManager.instance.GetComponent<PlayerInventory>();
+    public WeaponData data;
+    
+    public int ammo = 0; // Ammo contained in the pickup. maybe after dropping 
 
     void Start()
     {
@@ -15,14 +18,11 @@ public class WeaponPickup : MonoBehaviour, IInteractable
     }
 
     public void Interact()
-    {
-        Debug.Log("Picked up weapon");
-        Destroy(gameObject);
-        
-        //Make some checks to see if you can pick up the weapon
-        if (inventory.weapons.Count < 2)
+    {        
+        if(PlayerManager.instance.inventory.weapons.Count < 2)
         {
-
+            PlayerManager.instance.inventory.AddWeapon(data);
+            Destroy(gameObject);
         }
     }
 }

@@ -11,6 +11,6 @@ public class WeaponData : ScriptableObject
     public float fireRate;
     public float spread;
     public GameObject pickupPrefab;
-    public GameObject equipPregab;
+    public GameObject equipPrefab;
 
 }
