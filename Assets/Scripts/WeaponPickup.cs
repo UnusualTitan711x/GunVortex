@@ -15,6 +15,6 @@ public class WeaponPickup : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        // Do something
+        Debug.Log("Picked up weapon");
     }
 }
