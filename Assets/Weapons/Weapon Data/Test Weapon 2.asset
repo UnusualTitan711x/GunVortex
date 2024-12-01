@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04459284a20c1b409593f6b30e36380, type: 3}
   m_Name: Test Weapon 2
   m_EditorClassIdentifier: 
-  weaponName: Test weapon
+  weaponName: Test weapon 2
   reloadTime: 1
   magazineSize: 5
   capacity: 20
   isAutomatic: 0
   fireRate: 0.5
   spread: 0
-  pickupPrefab: {fileID: 1570680805397086800, guid: 7f7b595671e544840a4552b9ef181069, type: 3}
-  equipPrefab: {fileID: 8336840319054984781, guid: e9b0f8cd429b4cb45945516ec5509e01, type: 3}
+  pickupPrefab: {fileID: 1570680805397086800, guid: 55a8e375025c40f49849308b04f3c06a, type: 3}
+  equipPrefab: {fileID: 8336840319054984781, guid: 3f9caae02d8893246875b2a13a429ce6, type: 3}
