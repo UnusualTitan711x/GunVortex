@@ -3,22 +3,37 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     public Transform raypoint;
+    public float range = 1f;
     RaycastHit2D hit;
     Ray2D ray;
+    int interactableLayer;
     void Awake()
     {
         ray = new Ray2D(raypoint.position, raypoint.up);
+        interactableLayer = LayerMask.GetMask("Interactable");
     }
 
     void Update()
     {
-        hit = Physics2D.Raycast(raypoint.position, raypoint.up, 0.5f);
+        hit = Physics2D.Raycast(raypoint.position, raypoint.up, range, interactableLayer);
 
-        Debug.DrawRay(raypoint.position, raypoint.up * 0.5f, Color.red);
+        Debug.DrawRay(raypoint.position, raypoint.up * range, Color.red);
+
+        
 
         if (hit)
         {
-            Debug.Log("We hit something: " + hit.collider.name);
+            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+
+            if(interactable != null)
+            {
+                Debug.Log("Can Destry");
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hit.collider.GetComponent<TestDestroyObject>().Interact();
+                }
+            }
         }
     }
 }
