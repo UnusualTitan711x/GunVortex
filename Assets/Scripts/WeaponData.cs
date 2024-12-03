@@ -4,6 +4,7 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     public string weaponName;
+    public int damage;
     public float reloadTime;
     public int magazineSize;
     public int capacity;
@@ -12,5 +13,6 @@ public class WeaponData : ScriptableObject
     public float spread;
     public GameObject pickupPrefab;
     public GameObject equipPrefab;
+    public GameObject bulletPrefab;
 
 }

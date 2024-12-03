@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Test Weapon
   m_EditorClassIdentifier: 
   weaponName: Test weapon
+  damage: 0
   reloadTime: 1
-  magazineSize: 5
-  capacity: 20
+  magazineSize: 15
+  capacity: 24
   isAutomatic: 0
-  fireRate: 0.5
+  fireRate: 0.11
   spread: 0
   pickupPrefab: {fileID: 1570680805397086800, guid: 7f7b595671e544840a4552b9ef181069, type: 3}
   equipPrefab: {fileID: 8336840319054984781, guid: e9b0f8cd429b4cb45945516ec5509e01, type: 3}
+  bulletPrefab: {fileID: 1040669838667336883, guid: 9271e183b2152c048a3de38ac1653ee3, type: 3}
