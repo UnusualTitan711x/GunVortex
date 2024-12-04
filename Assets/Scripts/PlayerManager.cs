@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 
     public Transform weaponHolder;
     public PlayerInventory inventory;
+    public GameObject player;
 
     void Awake()
     {

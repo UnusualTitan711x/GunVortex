@@ -6,12 +6,17 @@ public class Bullet : MonoBehaviour
     public float lifetime = 4;
     public int damage;
     Rigidbody2D rb;
+    Vector2 playerVelocity, bulletDirection, finalVelocity;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifetime);
-        rb.linearVelocity = transform.up * speed;
+       
+        playerVelocity = PlayerManager.instance.player.GetComponent<Rigidbody2D>().linearVelocity;
+        bulletDirection = transform.up;
+        finalVelocity = playerVelocity + bulletDirection * speed;
+        rb.linearVelocity = finalVelocity;
     }
 
     void OnTriggerEnter2D(Collider2D col)
