@@ -19,10 +19,7 @@ public class WeaponPickup : MonoBehaviour, IInteractable
 
     public void Interact()
     {        
-        if(PlayerManager.instance.inventory.weapons.Count < 2)
-        {
-            PlayerManager.instance.inventory.AddWeapon(data);
-            Destroy(gameObject);
-        }
+        PlayerManager.instance.inventory.AddWeapon(data);
+        Destroy(gameObject);
     }
 }

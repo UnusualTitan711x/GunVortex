@@ -31,19 +31,28 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddWeapon(WeaponData data) // Add field for current ammo later
     {
+        if (currentWeapon != null && weapons.Count >= 2)
+        {
+            SwapWeapon(data);
+            return;
+        }
 
         GameObject newWeapon = Instantiate(data.equipPrefab, PlayerManager.instance.weaponHolder);
         newWeapon.GetComponent<Weapon>().weaponData = data;
-        newWeapon.SetActive(false);
+        
+        if (weapons.Count >= 1) newWeapon.SetActive(false);
+        if (weapons.Count == 0) currentWeapon = newWeapon;
 
         weapons.Add(newWeapon);
+        
+        
     }
 
     public void EquipWeapon(int index)
     {
-        if (index < 0 || index > 2) return;
+        //if (index < 0 || index > 2) return;
         
-        if (index >= weapons.Count) return;
+        if (index < 0 || index >= weapons.Count) return;
 
         if (currentWeapon != null)
         {
@@ -64,11 +73,21 @@ public class PlayerInventory : MonoBehaviour
         // Spawn the weapon pickup in the world
         GameObject worldPickup = Instantiate(currentWeapon.GetComponent<Weapon>().weaponData.pickupPrefab, PlayerManager.instance.weaponHolder.position, PlayerManager.instance.weaponHolder.rotation, null);
         worldPickup.transform.SetParent(null);
-        weapons.Remove(currentWeapon);
         Destroy(currentWeapon);
         currentWeapon = null;
 
 
         //If there is no space, swap the weapon with the current weapon
+    }
+
+    public void SwapWeapon(WeaponData data)
+    {
+        DropWeapon();
+
+        GameObject newWeapon = Instantiate(data.equipPrefab, PlayerManager.instance.weaponHolder);
+        newWeapon.GetComponent<Weapon>().weaponData = data;
+        weapons.Add(newWeapon);
+        EquipWeapon(1);
+
     }
 }

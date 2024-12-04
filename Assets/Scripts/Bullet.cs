@@ -21,6 +21,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Destroy(gameObject);
+        if (col.CompareTag("Environment"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
