@@ -45,11 +45,29 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        float spreadAngle = Random.Range(-weaponData.spread, weaponData.spread);
-        Vector3 spreadDirection = Quaternion.Euler(0, 0, spreadAngle) * firingPoint.up;
+        if (weaponData.bulletCount > 1)
+        {
+            float spreadAngle = -weaponData.spread;
 
-        GameObject bullet = Instantiate(weaponData.bulletPrefab, firingPoint.position, firingPoint.rotation);
-        bullet.GetComponent<Bullet>().damage = weaponData.damage;
+            for (int i = 0; i < weaponData.bulletCount; i++)
+            {
+                Vector3 spreadDirection = Quaternion.Euler(0, 0, spreadAngle) * firingPoint.up;
+
+                GameObject bullet = Instantiate(weaponData.bulletPrefab, firingPoint.position, Quaternion.LookRotation(Vector3.forward, spreadDirection));
+
+                spreadAngle += weaponData.spread / weaponData.bulletCount * 2;
+
+                bullet.GetComponent<Bullet>().damage = weaponData.damage;
+            }
+        }
+        else
+        {
+            float spreadAngle = Random.Range(-weaponData.spread, weaponData.spread);
+            Vector3 spreadDirection = Quaternion.Euler(0, 0, spreadAngle) * firingPoint.up;
+
+            GameObject bullet = Instantiate(weaponData.bulletPrefab, firingPoint.position, Quaternion.LookRotation(Vector3.forward, spreadDirection));
+            bullet.GetComponent<Bullet>().damage = weaponData.damage;
+        }
     }
 }
 

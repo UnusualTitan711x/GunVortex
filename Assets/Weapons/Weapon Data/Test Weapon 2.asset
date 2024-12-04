@@ -19,7 +19,7 @@ MonoBehaviour:
   capacity: 20
   isAutomatic: 1
   fireRate: 0.08
-  spread: 10
+  spread: 0
   pickupPrefab: {fileID: 1570680805397086800, guid: 55a8e375025c40f49849308b04f3c06a, type: 3}
   equipPrefab: {fileID: 8336840319054984781, guid: 3f9caae02d8893246875b2a13a429ce6, type: 3}
   bulletPrefab: {fileID: 1040669838667336883, guid: 9271e183b2152c048a3de38ac1653ee3, type: 3}

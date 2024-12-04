@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         playerVelocity = PlayerManager.instance.player.GetComponent<Rigidbody2D>().linearVelocity;
         bulletDirection = transform.up;
         finalVelocity = playerVelocity + bulletDirection * speed;
-        rb.linearVelocity = finalVelocity;
+        rb.linearVelocity = finalVelocity.normalized * speed;
     }
 
     void OnTriggerEnter2D(Collider2D col)

@@ -7,6 +7,7 @@ public class WeaponData : ScriptableObject
     public int damage;
     public float reloadTime;
     public int magazineSize;
+    public int bulletCount;
     public int capacity;
     public bool isAutomatic;
     public float fireRate;

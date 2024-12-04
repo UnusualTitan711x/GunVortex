@@ -73,11 +73,9 @@ public class PlayerInventory : MonoBehaviour
         // Spawn the weapon pickup in the world
         GameObject worldPickup = Instantiate(currentWeapon.GetComponent<Weapon>().weaponData.pickupPrefab, PlayerManager.instance.weaponHolder.position, PlayerManager.instance.weaponHolder.rotation, null);
         worldPickup.transform.SetParent(null);
+        // worldPickup.GetComponent<WeaponPickup>().ammo = currentWeapon.GetComponent<Weapon>().magAmmo;
         Destroy(currentWeapon);
         currentWeapon = null;
-
-
-        //If there is no space, swap the weapon with the current weapon
     }
 
     public void SwapWeapon(WeaponData data)
@@ -88,6 +86,5 @@ public class PlayerInventory : MonoBehaviour
         newWeapon.GetComponent<Weapon>().weaponData = data;
         weapons.Add(newWeapon);
         EquipWeapon(1);
-
     }
 }
