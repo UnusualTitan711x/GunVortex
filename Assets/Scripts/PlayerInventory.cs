@@ -6,6 +6,11 @@ public class PlayerInventory : MonoBehaviour
     public List<GameObject> weapons = new List<GameObject>();
     public GameObject currentWeapon;
 
+    // Bullets
+    public int smallAmmo = 0;
+    public int mediumAmmo = 0;
+    public int shotgunShells = 0;
+
     void Start()
     {
         
@@ -49,9 +54,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void EquipWeapon(int index)
-    {
-        //if (index < 0 || index > 2) return;
-        
+    {        
         if (index < 0 || index >= weapons.Count) return;
 
         if (currentWeapon != null)
@@ -73,7 +76,6 @@ public class PlayerInventory : MonoBehaviour
         // Spawn the weapon pickup in the world
         GameObject worldPickup = Instantiate(currentWeapon.GetComponent<Weapon>().weaponData.pickupPrefab, PlayerManager.instance.weaponHolder.position, PlayerManager.instance.weaponHolder.rotation, null);
         worldPickup.transform.SetParent(null);
-        // worldPickup.GetComponent<WeaponPickup>().ammo = currentWeapon.GetComponent<Weapon>().magAmmo;
         Destroy(currentWeapon);
         currentWeapon = null;
     }
@@ -86,5 +88,13 @@ public class PlayerInventory : MonoBehaviour
         newWeapon.GetComponent<Weapon>().weaponData = data;
         weapons.Add(newWeapon);
         EquipWeapon(1);
+    }
+
+    public int SelectAmmo(BulletType type)
+    {
+        if (type == BulletType.small) return smallAmmo;
+        else if (type == BulletType.medium) return mediumAmmo;
+        else if (type == BulletType.shell) return shotgunShells;
+        else return 0;
     }
 }

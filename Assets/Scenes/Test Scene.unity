@@ -1645,6 +1645,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons: []
   currentWeapon: {fileID: 0}
+  smallAmmo: 15
+  mediumAmmo: 15
+  shotgunShells: 15
 --- !u!1001 &1319544875
 PrefabInstance:
   m_ObjectHideFlags: 0

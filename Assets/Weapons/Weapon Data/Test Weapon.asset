@@ -15,7 +15,9 @@ MonoBehaviour:
   weaponName: Test weapon
   damage: 0
   reloadTime: 1
-  magazineSize: 15
+  bulletType: 0
+  magazineSize: 5
+  bulletCount: 0
   capacity: 24
   isAutomatic: 0
   fireRate: 0.11

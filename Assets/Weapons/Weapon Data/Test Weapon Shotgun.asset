@@ -15,6 +15,7 @@ MonoBehaviour:
   weaponName: Shotgun
   damage: 0
   reloadTime: 3
+  bulletType: 2
   magazineSize: 5
   bulletCount: 4
   capacity: 8
