@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04459284a20c1b409593f6b30e36380, type: 3}
+  m_Name: Test Weapon Shotgun
+  m_EditorClassIdentifier: 
+  weaponName: Shotgun
+  damage: 10
+  reloadTime: 3
+  bulletType: 2
+  magazineSize: 5
+  bulletCount: 4
+  capacity: 8
+  isAutomatic: 1
+  fireRate: 0.5
+  spread: 10
+  pickupPrefab: {fileID: 8354224380779260353, guid: 5614024ab1696cd4d98712b098108518, type: 3}
+  equipPrefab: {fileID: 5550959332440729595, guid: 9bc691ec9c2e99944a93b6f6e5c3f19d, type: 3}
+  bulletPrefab: {fileID: 1040669838667336883, guid: 9271e183b2152c048a3de38ac1653ee3, type: 3}

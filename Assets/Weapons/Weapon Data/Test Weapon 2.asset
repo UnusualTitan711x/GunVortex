@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04459284a20c1b409593f6b30e36380, type: 3}
+  m_Name: Test Weapon 2
+  m_EditorClassIdentifier: 
+  weaponName: Test weapon 2
+  damage: 10
+  reloadTime: 1
+  bulletType: 1
+  magazineSize: 30
+  bulletCount: 0
+  capacity: 20
+  isAutomatic: 1
+  fireRate: 0.08
+  spread: 0
+  pickupPrefab: {fileID: 1570680805397086800, guid: 55a8e375025c40f49849308b04f3c06a, type: 3}
+  equipPrefab: {fileID: 8336840319054984781, guid: 3f9caae02d8893246875b2a13a429ce6, type: 3}
+  bulletPrefab: {fileID: 1040669838667336883, guid: 9271e183b2152c048a3de38ac1653ee3, type: 3}
