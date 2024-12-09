@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Test Weapon 2
   m_EditorClassIdentifier: 
   weaponName: Test weapon 2
-  damage: 0
+  damage: 10
   reloadTime: 1
   bulletType: 1
   magazineSize: 30

@@ -21,9 +21,13 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Environment"))
+        if (col.CompareTag("Environment") || col.CompareTag("Destructible"))
         {
             Destroy(gameObject);
         }
+
+        IDamagable damagableObject = col.GetComponent<IDamagable>();
+
+        if (damagableObject != null) damagableObject.TakeDamage(damage);
     }
 }

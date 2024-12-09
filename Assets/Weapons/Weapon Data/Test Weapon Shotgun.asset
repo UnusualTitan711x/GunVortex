@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Test Weapon Shotgun
   m_EditorClassIdentifier: 
   weaponName: Shotgun
-  damage: 0
+  damage: 10
   reloadTime: 3
   bulletType: 2
   magazineSize: 5
