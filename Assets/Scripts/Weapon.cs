@@ -18,6 +18,11 @@ public class Weapon : MonoBehaviour
         totalAmmo = PlayerManager.instance.inventory.SelectAmmo(weaponData.bulletType);
     }
 
+    void OnEnable()
+    {
+        isReloading = false;
+    }
+
     void Update()
     {
         if (weaponData.isAutomatic)
