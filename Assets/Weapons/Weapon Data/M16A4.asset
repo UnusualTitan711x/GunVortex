@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04459284a20c1b409593f6b30e36380, type: 3}
+  m_Name: M16A4
+  m_EditorClassIdentifier: 
+  weaponName: M16A4
+  damage: 19
+  reloadTime: 2.2
+  bulletType: 1
+  magazineSize: 30
+  bulletCount: 0
+  isAutomatic: 1
+  fireRate: 0.075
+  spread: 0
+  pickupPrefab: {fileID: 4419913604264451866, guid: 0260c6d85d72fd84d9bbdafc439e4833, type: 3}
+  equipPrefab: {fileID: 4815015661562800499, guid: 66b4b848223433740bf4da185ae4965c, type: 3}
+  bulletPrefab: {fileID: 1040669838667336883, guid: 9271e183b2152c048a3de38ac1653ee3, type: 3}

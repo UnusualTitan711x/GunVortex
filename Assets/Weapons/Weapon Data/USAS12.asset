@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04459284a20c1b409593f6b30e36380, type: 3}
+  m_Name: USAS12
+  m_EditorClassIdentifier: 
+  weaponName: USAS12
+  damage: 10
+  reloadTime: 3
+  bulletType: 0
+  magazineSize: 10
+  bulletCount: 9
+  isAutomatic: 1
+  fireRate: 0.525
+  spread: 10
+  pickupPrefab: {fileID: 4815015661562800499, guid: 66b4b848223433740bf4da185ae4965c, type: 3}
+  equipPrefab: {fileID: 6845262541461029257, guid: 3d2da45c6fc5daa4e8c3a1d7f8b9becc, type: 3}
+  bulletPrefab: {fileID: 1040669838667336883, guid: 9271e183b2152c048a3de38ac1653ee3, type: 3}

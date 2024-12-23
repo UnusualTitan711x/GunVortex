@@ -46,7 +46,7 @@ public class Weapon : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && magAmmo <= 0 && !isReloading && totalAmmo > 0)
+        if (Input.GetMouseButton(0) && magAmmo <= 0 && !isReloading && totalAmmo > 0)
         {
             StartCoroutine(Reload());
         }
