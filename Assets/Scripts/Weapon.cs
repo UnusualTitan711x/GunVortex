@@ -112,6 +112,8 @@ public class Weapon : MonoBehaviour
 
         isReloading = false;
         Debug.Log("Reload Ended");
+
+        PlayerManager.instance.inventory.UpdateAmmo(weaponData.bulletType, totalAmmo);
     }
 }
 

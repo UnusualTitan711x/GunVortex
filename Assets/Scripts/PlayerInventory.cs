@@ -113,4 +113,12 @@ public class PlayerInventory : MonoBehaviour
         else if (type == BulletType.shell) return shotgunShells;
         else return 0;
     }
+
+    public void UpdateAmmo(BulletType type, int ammo)
+    {
+        if (type == BulletType.small) smallAmmo = ammo;
+        else if (type == BulletType.medium) mediumAmmo = ammo;
+        else if (type == BulletType.shell) shotgunShells = ammo;
+        else return;
+    }
 }
