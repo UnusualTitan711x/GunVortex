@@ -114,6 +114,7 @@ public class PlayerInventory : MonoBehaviour
         else return 0;
     }
 
+    // Updates the ammmo used by the weapons
     public void UpdateAmmo(BulletType type, int ammo)
     {
         if (type == BulletType.small) smallAmmo = ammo;

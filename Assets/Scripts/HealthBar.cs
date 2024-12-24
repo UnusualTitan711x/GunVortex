@@ -9,9 +9,11 @@ public class HealthBar : MonoBehaviour
     
     void Awake()
     {
+        // Assigns the slider for the health bar
         slider = gameObject.GetComponent<Slider>();
     }
 
+    // Function to update the health bar according to the health left
     public void UpdateHealthBar(int currentValue,int maxValue)
     {
         slider.value = currentValue / (float) maxValue;
@@ -19,6 +21,7 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
+        // Set the health bar rotation to always face the camera and position to me fixed
         transform.rotation = Camera.main.transform.rotation;
         transform.position = target.position + offset;
     }
