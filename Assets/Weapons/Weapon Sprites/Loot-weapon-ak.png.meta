@@ -124,6 +124,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -272,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Loot-weapon-ak_0: 7314839086830054883
+      Loot-weapon-ak_1: -1821974060693030336
+      Loot-weapon-ak_2: 2160288958204547176
+      Loot-weapon-ak_3: -6087072884166231688
+      Loot-weapon-ak_4: -2514852743717788980
+      Loot-weapon-ak_5: -827889020815536708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
