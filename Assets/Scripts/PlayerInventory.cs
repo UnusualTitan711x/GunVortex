@@ -35,6 +35,12 @@ public class PlayerInventory : MonoBehaviour
         {
             DropWeapon();
         }
+
+        if (currentWeapon == null)
+        {
+            UI_Manager.instance.weaponNameText.SetText("");
+            UI_Manager.instance.ammoText.SetText("");
+        }
     }
 
     public void AddWeapon(WeaponData data) // Add field for current ammo later
@@ -72,6 +78,8 @@ public class PlayerInventory : MonoBehaviour
         // Set the other weapon active
         currentWeapon = weapons[index];
         currentWeapon.SetActive(true);
+
+        UI_Manager.instance.weaponNameText.SetText(currentWeapon.GetComponent<Weapon>().weaponData.weaponName + ":");
     }
 
     public void DropWeapon() // Don't forget to put ammo too

@@ -19,12 +19,16 @@ public class Weapon : MonoBehaviour
 
         // Get the ammo reserve from the inventory, depending on the ammo type
         totalAmmo = PlayerManager.instance.inventory.SelectAmmo(weaponData.bulletType);
+
+        UI_Manager.instance.weaponNameText.SetText(weaponData.weaponName + ":");
     }
 
     void OnEnable()
     {
         // This is to fix a bug where the player cannot shoot if you were reloading and you switched weapons
         isReloading = false;
+
+        //UI_Manager.instance.weaponNameText.SetText(weaponData.weaponName);
     }
 
     void Update()
@@ -72,6 +76,8 @@ public class Weapon : MonoBehaviour
         {
             StartCoroutine(Reload());
         }
+
+        UI_Manager.instance.ammoText.SetText(magAmmo.ToString());
     }
 
     // Shoot function
