@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour, IDamagable
 {
     public int maxHealth, health;
     public float speed;
+    float detectionRange;
     public HealthBar healthBar;
     private Rigidbody2D rb;
     private Transform player;
@@ -36,9 +37,14 @@ public class Enemy : MonoBehaviour, IDamagable
     {
         player = PlayerManager.instance.player.transform;
         
-        if (Vector2.Distance(transform.position, player.position) <= 5)
+        if (Vector2.Distance(transform.position, player.position) <= detectionRange)
         {
             FollowPlayer();
+        }
+        else 
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
         }
     }
 
