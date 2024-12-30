@@ -18,7 +18,6 @@ public class WeaponData : ScriptableObject
     public BulletType bulletType;
     public int magazineSize;
     public int bulletCount;
-    public int capacity;
     public bool isAutomatic;
     public float fireRate;
     public float spread;
