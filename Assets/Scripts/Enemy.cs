@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour, IDamagable
 {
     public int maxHealth, health;
     public float speed;
-    float detectionRange;
+    float detectionRange = 7;
     public HealthBar healthBar;
     private Rigidbody2D rb;
     private Transform player;

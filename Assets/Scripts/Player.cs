@@ -4,6 +4,8 @@ public class Player : MonoBehaviour
 {
 
     private Rigidbody2D rb;
+    public Joystick movementJoystick;
+    public Joystick rotationJoystick;
 
     public float speed = 6f;
     private float mov_x, mov_y;
@@ -32,8 +34,8 @@ public class Player : MonoBehaviour
     void GetInput()
     {
         // Getting mouse and keyboard input
-        mov_x = Input.GetAxisRaw("Horizontal");
-        mov_y = Input.GetAxisRaw("Vertical");
+        mov_x = movementJoystick.Horizontal;
+        mov_y = movementJoystick.Vertical;
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour
     void CharacterRotate()
     {
         // Calculate the angle the character should face and rotate accordingly
-        float angle = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(rotationJoystick.Direction.y, rotationJoystick.Direction.x) * Mathf.Rad2Deg - 90f;
     
         transform.localRotation = Quaternion.Euler(0, 0, angle);
     }
