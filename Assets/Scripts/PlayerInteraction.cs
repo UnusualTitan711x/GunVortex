@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     RaycastHit2D hit;
     Ray2D ray;
     int interactableLayer;
+    IInteractable interactable;
     void Awake()
     {
         ray = new Ray2D(raypoint.position, raypoint.up);
@@ -20,16 +21,21 @@ public class PlayerInteraction : MonoBehaviour
 
         if (hit)
         {
-            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            interactable = hit.collider.GetComponent<IInteractable>();
 
             if(interactable != null)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("Interacting");
-                    interactable.Interact();
+                    
                 }
             }
         }
+    }
+
+    public void Interact()
+    {
+        Debug.Log("Interacting");
+        interactable.Interact();
     }
 }

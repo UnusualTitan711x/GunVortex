@@ -113,6 +113,13 @@ public class PlayerInventory : MonoBehaviour
         EquipWeapon(1);
     }
 
+    public void SwitchWeapon()
+    {
+        int index = weapons.IndexOf(currentWeapon);
+
+        EquipWeapon((index + 1) % 2);
+    }
+
     // Sets the bullet that the weapon should use from the inventory
     public int SelectAmmo(BulletType type)
     {

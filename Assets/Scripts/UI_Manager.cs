@@ -7,6 +7,7 @@ public class UI_Manager: MonoBehaviour
 
     public TextMeshProUGUI weaponNameText;
     public TextMeshProUGUI ammoText;
+    public TextMeshProUGUI reloadingText;
 
     void Awake()
     {

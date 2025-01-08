@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: M16A4
   damage: 19
-  reloadTime: 2.2
+  reloadTime: 1
   bulletType: 1
   magazineSize: 30
   bulletCount: 0
