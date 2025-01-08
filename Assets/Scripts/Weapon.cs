@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
         if (weaponData.isAutomatic)
         {
             // Check for input and other conditions before shooting
-            if (Input.GetMouseButton(0) && fireTimer <= 0 && magAmmo > 0 && !isReloading)
+            if (PlayerManager.instance.player.GetComponent<Player>().rotationDirection.magnitude >= .6 && fireTimer <= 0 && magAmmo > 0 && !isReloading)
             {
                 Shoot();
 
@@ -66,7 +66,7 @@ public class Weapon : MonoBehaviour
         // Check for some conditions before reloading
 
         // If shooting is attempted with an empty magazine, then reload
-        if (Input.GetMouseButton(0) && magAmmo <= 0 && !isReloading && totalAmmo > 0)
+        if (PlayerManager.instance.player.GetComponent<Player>().rotationDirection.magnitude >= 1 && magAmmo <= 0 && !isReloading && totalAmmo > 0)
         {
             StartCoroutine(Reload());
         }
@@ -83,6 +83,9 @@ public class Weapon : MonoBehaviour
     // Shoot function
     void Shoot()
     {
+        // Check for conditions before shooting
+        
+
         // Check if the gun shoots multiple bullets at once
         if (weaponData.bulletCount > 1)
         {
