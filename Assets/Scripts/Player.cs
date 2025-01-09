@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
     void GetInput()
     {
         rotationDirection = new Vector2(rotationJoystick.Horizontal, rotationJoystick.Vertical);
-        Debug.Log(rotationDirection.magnitude);
 
         // Getting mouse and keyboard input
         mov_x = movementJoystick.Horizontal;
