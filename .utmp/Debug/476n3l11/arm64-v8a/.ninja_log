@@ -1,0 +1,12 @@
+# ninja log v5
+61	467	7580838021444841	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	a9fa823b777f0a69
+469	826	7580838025283165	C:/Users/Arthur Djiomou/Github/GunVortex/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/476n3l11/obj/arm64-v8a/libswappywrapper.so	6c1d81a4c02a793f
+22	1489	7580838031630789	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e30f8c6966c822e5
+44	1494	7580838031742852	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c6828d8217e2d345
+29	1497	7580838031880895	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	807e72ea66748f46
+9	1499	7580838031725614	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c17d36d88d9dfc2c
+51	1510	7580838031991412	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4e793a6e89bf0372
+16	1554	7580838032475057	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	483404a18aac5d79
+36	1637	7580838033360594	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	435990b0ddbb838d
+1	1700	7580838033916711	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	bbbc7fcb0acd6354
+1700	1838	7580838035346753	C:/Users/Arthur Djiomou/Github/GunVortex/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/476n3l11/obj/arm64-v8a/libgame.so	a75a8756dc73f83e
