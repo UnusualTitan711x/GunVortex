@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         mov_x = movementJoystick.Horizontal;
         mov_y = movementJoystick.Vertical;
 
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void CharacterRotate()
