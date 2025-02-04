@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
         // Shoot indifferently for automatic and non-aitomatic guns
             
         // Check for input and other conditions before shooting
-        if (PlayerManager.instance.player.GetComponent<Player>().rotationDirection.magnitude >= 0.8 && fireTimer <= 0 && magAmmo > 0 && !isReloading)
+        if (PlayerManager.instance.player.GetComponent<Player>().rotationDirection.magnitude >= 0.95 && fireTimer <= 0 && magAmmo > 0 && !isReloading)
         {
             Shoot();   
         }

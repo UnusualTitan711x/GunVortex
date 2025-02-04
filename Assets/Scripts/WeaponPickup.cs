@@ -7,16 +7,6 @@ public class WeaponPickup : MonoBehaviour, IInteractable
     
     public int ammo = 0; // Ammo contained in the pickup. maybe after dropping 
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Interact()
     {        
         PlayerManager.instance.inventory.AddWeapon(data);

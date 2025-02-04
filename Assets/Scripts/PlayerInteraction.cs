@@ -19,23 +19,31 @@ public class PlayerInteraction : MonoBehaviour
         hit = Physics2D.Raycast(raypoint.position, raypoint.up, range, interactableLayer);
         Debug.DrawRay(raypoint.position, raypoint.up * range, Color.red);
 
+        if (hit && hit.collider.GetComponent<IInteractable>() != null)
+        {
+            UI_Manager.instance.interactButton.gameObject.SetActive(true); 
+        }
+        else
+        {
+            UI_Manager.instance.interactButton.gameObject.SetActive(false);
+        }
+    }
+
+    public void Interact()
+    {
+
+        hit = Physics2D.Raycast(raypoint.position, raypoint.up, range, interactableLayer);
+        Debug.DrawRay(raypoint.position, raypoint.up * range, Color.red);
+
         if (hit)
         {
             interactable = hit.collider.GetComponent<IInteractable>();
 
             if(interactable != null)
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    
-                }
+                Debug.Log("Interacting");
+                interactable.Interact();
             }
         }
-    }
-
-    public void Interact()
-    {
-        Debug.Log("Interacting");
-        interactable.Interact();
     }
 }

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour, IDamagable
     public HealthBar healthBar;
     private Rigidbody2D rb;
     private Transform player;
+    [SerializeField] private Transform graphic;
 
     // Initiate health bar from Awake
     void Awake()
@@ -33,7 +34,7 @@ public class Enemy : MonoBehaviour, IDamagable
         else Destroy(this.gameObject);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         player = PlayerManager.instance.player.transform;
         

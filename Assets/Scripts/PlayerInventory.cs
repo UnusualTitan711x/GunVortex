@@ -41,6 +41,15 @@ public class PlayerInventory : MonoBehaviour
             UI_Manager.instance.weaponNameText.SetText("");
             UI_Manager.instance.ammoText.SetText("");
         }
+
+        if (weapons.Count > 1)
+        {
+            UI_Manager.instance.switchButton.gameObject.SetActive(true);
+        }
+        else 
+        {
+            UI_Manager.instance.switchButton.gameObject.SetActive(false);
+        }
     }
 
     public void AddWeapon(WeaponData data) // Add field for current ammo later

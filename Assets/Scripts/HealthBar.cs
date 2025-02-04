@@ -22,7 +22,10 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         // Set the health bar rotation to always face the camera and position to me fixed
-        transform.rotation = Camera.main.transform.rotation;
+        Vector3 direction = Camera.main.transform.position - transform.position;
+        direction.y = 0;
+        transform.rotation = Quaternion.LookRotation(-direction);
+        
         transform.position = target.position + offset;
     }
 }
