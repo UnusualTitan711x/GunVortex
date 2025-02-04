@@ -22,6 +22,12 @@ public class Weapon : MonoBehaviour
 
         UI_Manager.instance.weaponNameText.SetText(weaponData.weaponName + ":");
         UI_Manager.instance.reloadingText.gameObject.SetActive(false);
+
+        UI_Manager.instance.fireButton.gameObject.SetActive(true);
+        UI_Manager.instance.reloadButton.gameObject.SetActive(true);
+
+        UI_Manager.instance.fireButton.onClick.AddListener(Shoot);
+        UI_Manager.instance.reloadButton.onClick.AddListener(ReloadWeapon);
     }
 
     void OnEnable()
