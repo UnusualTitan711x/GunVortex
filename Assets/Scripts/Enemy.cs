@@ -37,7 +37,12 @@ public class Enemy : MonoBehaviour, IDamagable
             health -= damage;
             healthBar.UpdateHealthBar(health, maxHealth);
         }
-        else Destroy(this.gameObject);
+        else 
+        {
+            UI_Manager.instance.enemyCounter++;
+            UI_Manager.instance.UpdateKillCount();
+            Destroy(this.gameObject);
+        }
     }
 
     void FixedUpdate()
