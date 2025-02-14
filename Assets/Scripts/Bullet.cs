@@ -1,11 +1,14 @@
 using UnityEngine;
 
+enum IntendedTarget {Player, Enemy}
+
 public class Bullet : MonoBehaviour
 {
     public float speed = 5;
     public float lifetime = 4;
     public int damage;
     Rigidbody2D rb;
+    IntendedTarget intendedTarget;
     Vector2 playerVelocity, bulletDirection, finalVelocity;
 
     void Start()

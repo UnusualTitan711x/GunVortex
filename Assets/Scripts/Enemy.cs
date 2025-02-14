@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour, IDamagable
     public HealthBar healthBar;
     private Rigidbody2D rb;
     private Transform player;
-    [SerializeField] private Transform graphic;
+    [SerializeField] Transform muzzle;
     NavMeshAgent agent;
 
     // Initiate health bar from Awake
