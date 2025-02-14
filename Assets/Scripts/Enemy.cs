@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, IDamagable
 {
     public int maxHealth, health;
     public float speed;
-    float detectionRange = 7;
+    float detectionRange = 10;
     public HealthBar healthBar;
     private Rigidbody2D rb;
     private Transform player;
     [SerializeField] private Transform graphic;
+    NavMeshAgent agent;
 
     // Initiate health bar from Awake
     void Awake()
@@ -20,7 +22,11 @@ public class Enemy : MonoBehaviour, IDamagable
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        agent = GetComponent<NavMeshAgent>();
         healthBar.UpdateHealthBar(health, maxHealth);
+
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     // Function to take damage from the bullets
@@ -53,6 +59,6 @@ public class Enemy : MonoBehaviour, IDamagable
     {
         float angle = Mathf.Atan2(player.position.y - transform.position.y, player.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
         transform.localRotation = Quaternion.Euler(0, 0, angle);
-        rb.linearVelocity = transform.up * speed;
+        agent.SetDestination(player.transform.position);
     }
 }
