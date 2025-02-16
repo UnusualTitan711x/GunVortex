@@ -24,13 +24,14 @@ public class Player : MonoBehaviour
     {
         // Always get input and rotate the character 
         GetInput();
-        CharacterRotate();
     }
 
     void FixedUpdate()
     {
         // Set the character to move using physics
         rb.linearVelocity = new Vector2(mov_x, mov_y) * speed * 100.0f * Time.fixedDeltaTime;
+
+        CharacterRotate();
     }
 
     void GetInput()
