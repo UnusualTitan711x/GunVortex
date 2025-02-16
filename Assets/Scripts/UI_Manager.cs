@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class UI_Manager: MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class UI_Manager: MonoBehaviour
     public Button switchButton;
     public Button fireButton;
     public Button reloadButton;
+
+    public List<GameObject> weaponIndicator;
 
     public int enemyCounter = 0;
 

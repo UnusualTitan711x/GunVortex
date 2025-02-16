@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -71,6 +72,15 @@ public class PlayerInventory : MonoBehaviour
         if (weapons.Count == 0) currentWeapon = newWeapon;
 
         weapons.Add(newWeapon);
+
+        foreach (GameObject item in UI_Manager.instance.weaponIndicator)
+        {
+            if (item.activeSelf == false)
+            {
+                item.SetActive(true);
+                break;           
+            }
+        }
     }
 
     public void EquipWeapon(int index)
