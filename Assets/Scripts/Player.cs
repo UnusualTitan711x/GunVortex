@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public Joystick rotationJoystick;
 
     public float speed = 6f;
+    public int health = 50;
     private float mov_x, mov_y;
 
     private Vector2 mousePos;
@@ -52,5 +53,11 @@ public class Player : MonoBehaviour
         {
             transform.localRotation = Quaternion.Euler(0, 0, angle);
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        print("Player took damage");
     }
 }

@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour
         // Check for some conditions before reloading
 
         // If shooting is attempted with an empty magazine, then reload
-        if (PlayerManager.instance.player.GetComponent<Player>().rotationDirection.magnitude >= 0.8 && magAmmo <= 0 && !isReloading && totalAmmo > 0)
+        if (PlayerManager.instance.player.GetComponent<Player>().rotationDirection.magnitude >= 0.95 && magAmmo <= 0 && !isReloading && totalAmmo > 0)
         {
             StartCoroutine(Reload());
         }

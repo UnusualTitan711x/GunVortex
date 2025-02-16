@@ -1,6 +1,6 @@
 using UnityEngine;
 
-enum IntendedTarget {Player, Enemy}
+public enum IntendedTarget {Player, Enemy}
 
 public class Bullet : MonoBehaviour
 {
@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float lifetime = 4;
     public int damage;
     Rigidbody2D rb;
-    IntendedTarget intendedTarget;
+    public IntendedTarget intendedTarget;
     Vector2 playerVelocity, bulletDirection, finalVelocity;
 
     void Start()
@@ -31,6 +31,17 @@ public class Bullet : MonoBehaviour
 
         IDamagable damagableObject = col.GetComponent<IDamagable>();
 
-        if (damagableObject != null) damagableObject.TakeDamage(damage);
+        if (intendedTarget == IntendedTarget.Enemy)
+        {
+            if (damagableObject != null)
+            {
+                damagableObject.TakeDamage(damage);
+            }
+        }
+        else if (intendedTarget == IntendedTarget.Player)
+        {
+            PlayerManager.instance.player.GetComponent<Player>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }
