@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     public float speed = 6f;
     public int health = 50;
+    public int maxHealth = 50;
     private float mov_x, mov_y;
 
     private Vector2 mousePos;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     {
         // Initialise the rigidbody used by the player
         rb = gameObject.GetComponent<Rigidbody2D>();
+        UpdateHealthBar();
     }
 
     void Update()
@@ -59,6 +61,23 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        UpdateHealthBar();
+        if (health <= 0)
+        {
+            Die();
+            return;
+        }
+        
         print("Player took damage");
+    }
+
+    public void UpdateHealthBar()
+    {
+        UI_Manager.instance.healthSlider.value = (float) health / maxHealth;
+    }
+
+    void Die()
+    {
+        print("Player is ded");
     }
 }

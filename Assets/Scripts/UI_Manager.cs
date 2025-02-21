@@ -19,6 +19,8 @@ public class UI_Manager: MonoBehaviour
 
     public List<GameObject> weaponIndicator;
 
+    public Slider healthSlider;
+
     public int enemyCounter = 0;
 
     void Awake()
