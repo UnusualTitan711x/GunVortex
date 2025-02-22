@@ -19,7 +19,7 @@ MonoBehaviour:
   magazineSize: 30
   bulletCount: 0
   isAutomatic: 1
-  fireRate: 0.075
+  fireRate: 0.18
   spread: 0
   pickupPrefab: {fileID: 4419913604264451866, guid: 0260c6d85d72fd84d9bbdafc439e4833, type: 3}
   equipPrefab: {fileID: 4815015661562800499, guid: 66b4b848223433740bf4da185ae4965c, type: 3}

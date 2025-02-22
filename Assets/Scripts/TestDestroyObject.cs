@@ -1,14 +1,9 @@
 using UnityEngine;
 
-public class TestDestroyObject : MonoBehaviour, IInteractable, IDamagable
+public class TestDestroyObject : MonoBehaviour, IDamagable
 {
     public int maxHealth, health;
     public HealthBar healthBar;
-
-    public void Interact()
-    {
-        Destroy(this.gameObject);
-    }
 
     // Initiate health bar from Awake
     void Awake()
