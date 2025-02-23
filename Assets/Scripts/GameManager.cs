@@ -23,10 +23,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         initialEnemyCount = enemyContainer.transform.childCount;
+        Time.timeScale = 1;
     }
 
     public void RestartGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

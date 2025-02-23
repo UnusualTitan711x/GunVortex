@@ -9,6 +9,7 @@ public class EndGame : MonoBehaviour
         {
             print("End Game");
             UI_Manager.instance.endScreen.SetActive(true);
+            Time.timeScale = 0;
 
             int initialECount = GameManager.instance.initialEnemyCount;
             int finalECount = GameManager.instance.enemyContainer.transform.childCount;
