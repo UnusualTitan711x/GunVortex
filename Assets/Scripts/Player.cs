@@ -79,5 +79,7 @@ public class Player : MonoBehaviour
     void Die()
     {
         print("Player is ded");
+        UI_Manager.instance.gameOverScreen.SetActive(true);
+        Time.timeScale = 0;
     }
 }

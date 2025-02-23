@@ -21,6 +21,10 @@ public class UI_Manager: MonoBehaviour
 
     public Slider healthSlider;
 
+    public GameObject endScreen;
+    public GameObject gameOverScreen;
+    public TextMeshProUGUI killCountText;
+
     public int enemyCounter = 0;
 
     void Awake()
